@@ -12,6 +12,7 @@ const Details = ({info}) => {
     const url = `${process.env.REACT_APP_BASE_URL}/${info.id}.json`;
 
     useEffect(() => {
+        setLoading(true)
         const fetchData = async () => {
             try {
                 const response = await fetch(url);

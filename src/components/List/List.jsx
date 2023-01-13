@@ -10,6 +10,7 @@ const List = ({setInfo}) => {
     const [isLoading, setLoading] = useState(false)
     const [hasError, setError] = useState(null)
     useEffect(() => {
+        setLoading(true)
         const fetchData = async () => {
             try {
                 const response = await fetch(url);
